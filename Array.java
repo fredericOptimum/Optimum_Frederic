@@ -7,19 +7,14 @@ import java.util.Scanner;
 class Sort1{
 	boolean Sort1(int userinput){
 		boolean check = true;
-		if (userinput < 1) {
+		if (userinput < 1 || userinput > 12) {
 			System.out.println("Please Input A Proper number up from 1 to 12.");
 			check = false;
 		}
 		else {
 			int[] size = new int[userinput];
 			for (int counter = 0; counter < size.length;counter++) {
-				if (userinput < 1 || userinput > 12) {
-					System.out.println("Please Input A Proper number up from 1 to 12.");
-					check = false;
-					break;
-				}
-				else if (counter < 2) {
+				if (counter < 2) {
 					size[counter] = counter;
 				}
 				else {
